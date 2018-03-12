@@ -25,9 +25,23 @@ namespace GradeBook.GradeBooks
 
             int studentsBetterThanThis = this.Students.Where(x => x.AverageGrade > averageGrade).Count();
 
-            if (studentsBetterThanThis < Students.Count / 5)
+            int twentyPercent = Students.Count / 5;
+
+            if (studentsBetterThanThis < twentyPercent)
             {
                 return 'A';
+            }
+            else if (studentsBetterThanThis < twentyPercent * 2)
+            {
+                return 'B';
+            }
+            else if (studentsBetterThanThis < twentyPercent * 3)
+            {
+                return 'C'';
+            }
+            else if (studentsBetterThanThis < twentyPercent * 4)
+            {
+                return 'D';
             }
 
             return 'F';
