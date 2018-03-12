@@ -37,7 +37,7 @@ namespace GradeBook.GradeBooks
             }
             else if (studentsBetterThanThis < twentyPercent * 3)
             {
-                return 'C'';
+                return 'C';
             }
             else if (studentsBetterThanThis < twentyPercent * 4)
             {
